@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "your-firebase-project-id",
+    "prod": "littleflowersplayschool-ac2a1"
+  },
+  "targets": {},
+  "etags": {}
+}
