@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /reviews/{reviewId} {
+      // Anyone can read reviews
+      allow read: if true;
+      // Only authenticated users can write reviews
+      allow create: if request.auth != null;
+      // Prevent updating or deleting reviews (admin only via console)
+      allow update, delete: if false;
+    }
+  }
+}
